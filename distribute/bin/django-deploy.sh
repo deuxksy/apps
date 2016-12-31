@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 echo $# $*
 
-if [ $# -ne 4 ]
+if [ $# -ne 2 ]
 then
-    echo '[ERROR]./deploy.sh -p PROJECT_NAME -a APP_NAME'
+    echo '[ERROR]./deploy.sh -p PROJECT_NAME'
     exit
 fi
 
-while getopts ":p:a:" opt
+while getopts ":p:" opt
 do
 	case ${opt} in
 		p) project=${OPTARG};;
@@ -15,7 +15,7 @@ do
 done
 
 # echo ${project}-'deploy'
-project_home=/home/crom/apps/${project}/default
+project_home=/home/crom/apps/app/${project}/default
 app_name=${project}
 backup_home=/home/crom/apps/backup/${app_name}
 

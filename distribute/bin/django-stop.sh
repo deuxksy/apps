@@ -10,7 +10,7 @@ do
 	esac
 done
 
-project_home=${project_home:=/home/crom/apps/ybank/default}
+project_home=${project_home:=/home/crom/apps/app/ybank/default}
 app_name=${app_name:=ybank}
 cd ${project_home}
 

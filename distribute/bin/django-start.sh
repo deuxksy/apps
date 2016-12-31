@@ -10,9 +10,9 @@ do
 	esac
 done
 
-project_home=${project_home:=/home/crom/apps/ybank/default}
+project_home=${project_home:=/home/crom/apps/app/ybank/default}
 app_name=${app_name:=ybank}
-log_home=${project_home:=:=/home/crom/apps/log/${app_name}}
+log_home=${project_home:=:=/home/crom/apps/log/ybank}
 cd ${project_home}
 
 nohup gunicorn ${app_name}.wsgi -b 0.0.0.0:8000 & > ${log_home}/log
