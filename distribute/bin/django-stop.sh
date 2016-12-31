@@ -16,13 +16,13 @@ cd ${project_home}
 
 KPID=`ps -eaf | grep "${app_name}.wsgi" | grep -v grep | awk '{print $2}'`
 if [[ "" !=  "$KPID" ]]; then
-  echo "KILL TERM Tomcat $KPID"
+  echo "KILL TERM Django $KPID"
   kill -TERM $KPID
 fi
 
 sleep 3
 KPID=`ps -eaf | grep "${app_name}.wsgi" | grep -v grep | awk '{print $2}'`
 if [[ "" !=  "$KPID" ]]; then
-  echo "KILL 9 Tomcat $KPID"
+  echo "KILL 9 Django $KPID"
   kill -9 $KPID
 fi
